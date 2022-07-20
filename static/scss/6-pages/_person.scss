@@ -1,0 +1,51 @@
+// ********************
+// PERSON
+// ********************
+
+.content__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 65ch;
+}
+
+.person__thumbnail {
+  @extend .people__card__image;
+  margin-bottom: 1.25rem;
+}
+
+.person__heading {
+  @extend h2;
+}
+
+.person__position {
+  font-weight: 500;
+  color: $amaranth;
+}
+
+.person__btn {
+  @extend .btn;
+  @extend .btn--secondary;
+  margin-top: 2.5rem;
+}
+
+.person__info-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.person__email,
+.person__bullet {
+  font-weight: 500;
+  color: map-get($slate, "400");
+}
+
+.person__bullet {
+  margin: 0 0.5rem;
+}
+
+.section__helmet--person {
+  @extend .section__helmet;
+  text-align: start;
+}

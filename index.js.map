@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["nav","document","querySelector","window","onscroll","scrollY","classList","add","remove"],"mappings":"AAIA,MAAMA,IAAMC,SAASC,cAAc,QAEnCC,OAAOC,SAAW,KACZD,OAAOE,QAAU,EACnBL,IAAIM,UAAUC,IAAI,eAElBP,IAAIM,UAAUE,OAAO","file":"index.js"}

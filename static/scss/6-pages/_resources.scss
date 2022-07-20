@@ -1,0 +1,53 @@
+// ********************
+// RESOURCES
+// ********************
+
+.resource__download {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 29.375rem;
+  margin-top: 3.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  background-color: #f7efd5;
+  border: 3px dashed #92782e;
+  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+    0 4px 6px -4px rgba($black, 0.1);
+  overflow: none;
+  color: #92782e;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  }
+}
+
+.resource__download__copy {
+  position: relative;
+  padding-right: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  text-decoration: underline;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.5rem;
+    background-image: url("static/img/external-link.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,36 @@
+// ********************
+// PRO DEALS
+// ********************
+
+.deal__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(auto, minmax(0, 1fr));
+  gap: 1.875rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(auto, minmax(0, 1fr));
+  }
+}
+
+.deal__card {
+  @extend .membership__card;
+}
+
+.deal__logo {
+  width: auto;
+  height: 2rem;
+  opacity: 0.5;
+}
+
+.deal__heading {
+  @extend h5;
+  font-weight: 700;
+}
+
+.deal__excerpt {
+  font-size: 1rem;
+  line-height: 1.33rem;
+  color: map-get($slate, "400");
+}

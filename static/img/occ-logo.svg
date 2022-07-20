@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 349 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1,-3)">
+        <g id="Symbols" transform="matrix(4.16667,0,0,4.16667,0,0)">
+            <g transform="matrix(0.24,0,0,0.24,0,0)">
+                <path d="M76,37C79.532,29.997 84.152,24.058 88,20C88,20 75.946,3 49,3C22.054,3 1,26.378 1,52C1,77.622 19.023,98 50,98C94.977,98 100.867,23.5 129.5,23.5C149.133,23.5 139.59,31 152,31C168.41,31 168.143,4 131,4C81.857,4 80.115,78 49,78C13.885,78 9.951,24 50,24C65.049,24 76,37 76,37ZM214,98C188.194,98 175.5,80.5 175.5,80.5C178.147,77.528 185.574,65.521 187,62C187,62 197.78,78 215,78C234.633,78 232.196,63.697 244.605,63.697C265.015,63.697 251.143,98 214,98ZM132,78C109.777,78 103,61 103,61C99.467,68.599 96.219,74.414 91.5,80.5C91.5,80.5 101.023,98 132,98C179.977,98 186.17,23.5 214.803,23.5C234.435,23.5 224.893,31 237.303,31C253.712,31 253.445,4 216.303,4C167.16,4 165.115,78 132,78Z" style="fill:rgb(245,69,71);"/>
+            </g>
+            <g transform="matrix(0.24,0,0,0.24,0,0)">
+                <text x="1px" y="130.031px" style="font-family:'LucidaGrande-Bold', 'Lucida Grande', sans-serif;font-weight:600;font-size:20.833px;fill:rgb(245,69,71);">O<tspan x="18.005px 33.199px 47.427px 63.802px 80.807px 97.812px 112.04px 118.76px 133.456px 150.461px 165.656px 181.521px 196.217px 202.979px 214.948px 221.669px 238.674px 250.491px 257.212px 271.907px 287.102px 302.967px 318.162px 334.536px " y="130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px 130.031px ">UTDOOR COUNCIL OF CANADA</tspan></text>
+            </g>
+            <g transform="matrix(0.24,0,0,0.24,0,4.79251)">
+                <text x="1px" y="128.425px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:16.667px;fill:rgb(245,69,71);">C<tspan x="15.432px 31.279px 46.492px 58.368px 70.301px 78.003px 89.79px 97.963px 112.395px 126.794px 142.006px 156.405px 171.789px 179.491px 191.424px 206.637px 214.81px 230.194px 242.127px 250.3px 262.413px 274.199px 286.133px 293.834px 309.047px 317.22px 331.619px 339.321px " y="128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px 128.425px ">ONSEIL CANADIEN DE PLEIN AIR</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>

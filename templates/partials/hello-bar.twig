@@ -1,0 +1,40 @@
+<div id="hello" class="hello" x-data="{ open: true }" x-show="open">
+    <div class="hello__container">
+        <div class="hello__left">
+            <h4 class="hello__heading">Is your outdoor program resilient?</h4>
+            <p class="hello__subheading">Take this five-minute quiz to find out.</p>
+        </div>
+        <form method="POST" action="https://outdoorcouncilofcanada.activehosted.com/proc.php" id="_form_9_" class="_form _form_9 _inline-form  _dark" novalidate>
+            <input type="hidden" name="u" value="9" />
+            <input type="hidden" name="f" value="9" />
+            <input type="hidden" name="s" />
+            <input type="hidden" name="c" value="0" />
+            <input type="hidden" name="m" value="0" />
+            <input type="hidden" name="act" value="sub" />
+            <input type="hidden" name="v" value="2" />
+            <input type="hidden" name="or" value="6810dfaef97019e754f26a3c9cd0fa87" />
+            <div class="_form-content--hello">
+                <div class="_form_element--hello _x94991671 _full_width " >
+                    <label for="firstname" class="_form-label">First Name*</label>
+                    <div class="_field-wrapper--hello">
+                        <input type="text" id="firstname" name="firstname" placeholder="First name" required/>
+                    </div>
+                </div>
+                <div class="_form_element--hello _x06714821 _full_width " >
+                    <label for="email" class="_form-label">Email Address*</label>
+                    <div class="_field-wrapper--hello">
+                        <input type="text" id="email" name="email" placeholder="Email address" required/>
+                    </div>
+                </div>
+                <div class="_button-wrapper _full_width">
+                    <button id="_form_9_submit" class="_submit--hello" type="submit">Start the quiz!</button>
+                </div>
+                <div class="_clear-element"></div>
+            </div>
+            <div class="_form-thank-you" style="display:none;"></div>
+        </form>
+        <div class="hello__close-wrapper" @click.prevent="open = false">
+            <img src="{{ theme.path ~ '/static/img/x.svg' }}" alt="" class="hello__close-icon">
+        </div>
+    </div>
+</div>

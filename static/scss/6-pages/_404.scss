@@ -1,0 +1,44 @@
+.error__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 65ch;
+  text-align: center;
+}
+
+.error__heading {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+
+  @media screen and (max-width: map-get($breakpoints, "small")) {
+    font-size: 7.125rem;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    font-size: 7.125rem;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    font-size: 9.375em;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    font-size: 9.375rem;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    font-size: 12.75rem;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    font-size: 12.75rem;
+    line-height: 1;
+  }
+}

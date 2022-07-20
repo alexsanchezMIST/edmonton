@@ -1,0 +1,156 @@
+// ********************
+// BOX SHADOWS
+// ********************
+
+@mixin box-shadow($params) {
+  box-shadow: $params;
+}
+
+// ********************
+// FLEXBOX
+// ********************
+
+@mixin flex-col($justify: center, $align: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-row($justify: center, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// FLEXBOX CLASSES
+
+.flex-col {
+  @include flex-col(center, center);
+}
+
+.flex-col-start {
+  @include flex-col(flex-start, flex-start);
+}
+
+.flex-col-center-start {
+  @include flex-col(center, flex-start);
+}
+
+.flex-row {
+  @include flex-row(center, center);
+}
+
+.flex-row-between {
+  @include flex-row(space-between, center);
+}
+
+// ********************
+// GRID
+// ********************
+
+@mixin grid($rows, $columns, $gap) {
+  display: grid;
+  gap: $gap;
+
+  @media screen and (max-width: (map-get($breakpoints-minus-one, "large"))) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat($columns, minmax(0, min-content));
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat($columns, minmax(0, 1fr));
+    grid-template-rows: repeat($rows, minmax(0, 1fr));
+  }
+}
+
+// GRID CLASSES
+
+.grid-cols-6 {
+  @include grid(1, 6, map-get($spacing, "300"));
+}
+
+.grid-cols-5 {
+  @include grid(1, 5, map-get($spacing, "400"));
+}
+
+.grid-cols-4 {
+  @include grid(1, 4, map-get($spacing, "500"));
+}
+
+.grid-cols-3 {
+  @include grid(1, 3, map-get($spacing, "600"));
+}
+
+.grid-cols-2 {
+  @include grid(1, 2, map-get($spacing, "700"));
+}
+
+// SPAN CLASSES
+
+@mixin colSpan($columns) {
+  grid-column: span 1 / span 1;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span $columns / span $columns;
+  }
+}
+
+.col-span-6 {
+  @include colSpan(6);
+}
+
+.col-span-4 {
+  @include colSpan(4);
+}
+
+.col-span-3 {
+  @include colSpan(3);
+}
+
+.col-span-2 {
+  @include colSpan(2);
+}
+
+// ********************
+// POSITION
+// ********************
+
+@mixin position(
+  $position: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $z-index: initial
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}
+
+// ********************
+// TRANSITION
+// ********************
+
+@mixin transition($props: all, $duration: 0.3s, $easing: ease-in-out) {
+  transition: $props $duration $easing;
+}
+
+// ********************
+// TRUNCATE TEXT
+// ********************
+
+@mixin truncateText($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow;
+}
+
+.is-truncated {
+  @include truncateText(ellipsis);
+}

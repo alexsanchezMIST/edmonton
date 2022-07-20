@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main id="main" class="main--login" role="main">
+
+    {# BEGIN LOGIN SECTION #} 
+    <section id="login" class="section section--full">
+        <div class="container">
+            <div class="form-wrapper">
+                <img src="{{ theme.path ~ '/static/img/occ-logo.svg' }}" alt="" class="logo">
+                <h3 class="login__heading mb-4">Log In</h3>
+                {{ post.content }}
+            </div>
+            <div class="login__bottom">
+                <h6 class="login__bottom__heading">Don't have an OCC account?</h6>
+                <a href="/sign-up" class="login__bottom__link">Create new account</a>
+            </div>
+        </div>
+        <a href="/" id="back" class="btn btn--secondary">← Back to OCC website</a>
+    </section>
+    {# END LOGIN SECTION #}
+
+</main>
+
+{% endblock %}

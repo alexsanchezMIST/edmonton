@@ -1,0 +1,87 @@
+#hero--page {
+  background-color: map-get($slate, "50");
+  /*   background-image: url("static/img/cos-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+
+  @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
+    padding-top: 3.75rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 6.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    padding-top: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 7.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding-top: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 8.75rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    padding-top: 7.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 12.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    padding-top: 8.75rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 13.75rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    padding-top: 10rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 15rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/border-jagged2.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      height: 2.5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      height: 5rem;
+    }
+  }
+}
+
+.hero__heading--page {
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.prose--cos {
+  @extend .prose;
+}
+
+.prose--cos a {
+  color: #ed5424;
+}

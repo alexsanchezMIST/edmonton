@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<section id="content" class="section pt-36">
+        <div class="container">
+            <div class="content__wrapper">
+                {% if post.meta('avatar') %}
+                    <img src="{{ Image(post.meta('avatar')).src }}" alt="" class="person__thumbnail">
+                {% endif %}
+                <div class="section__helmet--person">
+                    <h1 class="person__heading">{{ post.title }}</h1>
+                    <div class="person__info-wrapper">
+                        <p class="person__position">{{ post.meta('position') }}</p>
+                        {% if post.meta('email') %}
+                            <p class="person__bullet">•</p>
+                            <a href="mailto:{{ post.meta('email') }}" class="person__email">{{ post.meta('email') }}</a>
+                        {% endif %}
+                    </div> 
+                </div>
+                <article class="prose">
+                    {{ post.content }}
+                </article>
+                <a href="/our-people" class="person__btn">← Back to Our People</a>
+            </div>
+        </div>
+	</section>
+
+    {% include 'partials/mountains.twig' %}
+
+{% endblock %}

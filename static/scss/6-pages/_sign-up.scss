@@ -1,0 +1,51 @@
+// ********************
+// MEMBERSHIP BENEFITS
+// ********************
+
+.membership__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 1.875rem;
+  margin: 2.5rem 0;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.membership__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  border: 2px solid map-get($slate, "100");
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+    border-color: $amaranth;
+
+    .membership__heading {
+      color: $amaranth;
+    }
+  }
+}
+
+.membership__heading {
+  @extend h4;
+  margin-bottom: 1.25rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.membership__description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: map-get($slate, "400");
+  margin-bottom: 2.5rem;
+}

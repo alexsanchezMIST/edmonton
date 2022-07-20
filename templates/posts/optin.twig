@@ -1,0 +1,23 @@
+{% extends 'base.twig' %} 
+
+{% block content %} 
+<main id="main" class="main">
+    <section id="content" class="section pt-18">
+        <div class="container">
+            {{ post.content }}
+        </div>
+    </section>
+
+    {% include 'partials/mountains.twig' %}
+
+</main>
+
+{% if post.slug == 'dei-resource-list' %}
+    <script type="text/javascript" src="{{ theme.path ~ '/static/js/form3.js' }}"></script>
+{% elseif post.slug == 'economic-impact-study' %}
+    <script type="text/javascript" src="{{ theme.path ~ '/static/js/form5.js' }}"></script>
+{% elseif post.slug == 'tips-tricks' %}
+    <script type="text/javascript" src="{{ theme.path ~ '/static/js/form7.js' }}"></script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,9 @@
+// ********************
+// DYNAMIC USER DIRECTORY
+// ********************
+
+.dir-listing {
+  padding: 1.25rem;
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.5rem;
+}

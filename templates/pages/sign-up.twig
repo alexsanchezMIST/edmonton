@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main id="main" class="main" role="main">
+
+{# BEGIN HERO SECTION #}
+<section id="hero--page" class="section py-18">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1 class="hero__heading--page">{{ post.title }}</h1>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN CONTENT SECTION #}
+<section id="content" class="section pt-18">
+    <img src="{{ theme.path ~ '/static/img/leaf.svg'}}" alt="" class="content__leaf">
+    <img src="{{ theme.path ~ '/static/img/moose.svg'}}" alt="" class="content__moose">
+    <div class="container">
+        <div class="content__wrapper">
+            <article id="post-{{ post.ID }}" class="prose post-type-{{ post.post_type }}">
+                {{ post.content }}
+            </article>
+<!--             <div class="membership__wrapper">
+                <a href="/membership-application" class="membership__card">
+                    <h3 class="membership__heading">Individual Members</h3>
+                    <p class="membership__description">Any individual who shares our vision is eligible to become a member.</p>
+                    <div class="btn btn--primary">View application →</div>
+                </a>
+                <a href="/associate-membership-application" class="membership__card">
+                    <h3 class="membership__heading">Associate Members</h3>
+                    <p class="membership__description">This option is for outdoor organizations delivering or enabling experiences outside.</p>
+                    <div class="btn btn--primary">View application →</div>
+                </a>
+            </div> -->
+        </div>
+    </div>
+</section>
+{# END CONTENT SECTION #}
+
+{% include "partials/mountains.twig" %}
+
+</main>
+
+{% endblock %}

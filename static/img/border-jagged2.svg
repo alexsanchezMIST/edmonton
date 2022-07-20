@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="80px" viewBox="0 0 1440 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Border</title>
+    <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Static" transform="translate(0.000000, -748.000000)">
+            <g id="Blog-#14" transform="translate(0.000000, 686.089866)">
+                <g id="Border" transform="translate(720.000000, 101.910134) scale(1, -1) translate(-720.000000, -101.910134) translate(0.000000, 61.910134)">
+                    <rect id="Rectangle" x="0" y="0" width="1440" height="80"></rect>
+                    <polygon id="Path-2" fill="#FFFFFF" points="0 1.10134124e-13 0 40 527.667535 26.6598572 787 32.5541017 900 28.7446772 1383.7375 55.031539 1440 40 1440 1.10134124e-13"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

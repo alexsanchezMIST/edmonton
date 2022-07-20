@@ -1,0 +1,27 @@
+// ********************
+// FONT FACE
+// ********************
+
+// OVERPASS
+@font-face {
+  font-family: "Overpass";
+  src: url("static/fonts/overpass/Overpass-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+}
+
+// PUBLIC SANS
+@font-face {
+  font-family: "Public Sans";
+  src: url("static/fonts/public-sans/PublicSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+}
+
+// CAVEAT
+@font-face {
+  font-family: "Caveat";
+  src: url("static/fonts/caveat/Caveat-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+}

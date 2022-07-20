@@ -1,0 +1,65 @@
+// ********************
+// FOOTER
+// ********************
+
+#footer {
+  background-color: $cello;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, min-content));
+  gap: 1.875rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.footer__logo {
+  @extend .nav__logo;
+}
+
+.footer__heading {
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.footer__link {
+  margin-bottom: 0.625rem;
+  font-size: 1rem;
+  line-height: 1.33rem;
+  font-weight: 600;
+  color: map-get($slate, "500");
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &--small {
+    @extend .footer__col;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.footer__bottom {
+  border-top: 1px solid map-get($slate, "400");
+}
+
+.footer__bottom-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,108 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main id="main" class="main" role="main">
+
+{# BEGIN HERO SECTION #}
+<section id="hero--page" class="section section--hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1 class="our-people__heading">Our People</h1>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN CONTENT SECTION #}
+<section id="people" class="section pt-18">
+    <div class="container">
+        <h2 class="people__heading">Staff Members</h2>
+        <div class="wrapper--staff">
+            <div class="people__wrapper">
+            {% for person in people %}
+                {% if person.meta('membership') == 'Staff Member' %}
+                    <a href="{{ person.link }}" class="people__card">
+                    {% if person.meta('avatar') %}
+                        <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
+                    {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
+                    {% endif %}
+                    <div class="people__right">
+                        <h3 class="people__card__heading">{{ person.title }}</h3>
+                        <p class="people__card__title">{{ person.meta('position') }}</p>
+                    </div>
+                </a>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        <div class="wrapper--board">
+            <h2 class="people__heading">Board Members</h2>
+            <div class="people__wrapper">
+            {% for person in people %}
+                {% if person.meta('membership') == 'National Board Member' %}
+                <a href="{{ person.link }}" class="people__card">
+                    {% if person.meta('avatar') %}
+                        <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
+                    {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
+                    {% endif %}
+                    <div class="people__right">
+                        <h3 class="people__card__heading">{{ person.title }}</h3>
+                        <p class="people__card__title">{{ person.meta('position') }}</p>
+                    </div>
+                </a>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        <div class="wrapper--committee">
+            <h2 class="people__heading">Curriculum Committee Members</h2>
+            <div class="people__wrapper">
+            {% for person in people %}
+                {% if person.meta('membership') == 'Curriculum Committee Member' %}
+                <a href="{{ person.link }}" class="people__card">
+                    {% if person.meta('avatar') %}
+                        <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
+                    {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
+                    {% endif %}
+                    <div class="people__right">
+                        <h3 class="people__card__heading">{{ person.title }}</h3>
+                        <p class="people__card__title">{{ person.meta('position') }}</p>
+                    </div>
+                </a>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        <div class="wrapper--founder">
+            <h2 class="people__heading">Our Founder</h2>
+            <div class="people__wrapper">
+            {% for person in people %}
+                {% if person.meta('membership') == 'Founder' %}
+                <a href="{{ person.link }}" class="people__card">
+                    {% if person.meta('avatar') %}
+                        <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
+                    {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
+                    {% endif %}
+                    <div class="people__right">
+                        <h3 class="people__card__heading">{{ person.title }}</h3>
+                        <p class="people__card__title">{{ person.meta('position') }}</p>
+                    </div>
+                </a>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{# END CONTENT SECTION #}
+
+{% include "partials/mountains.twig" %}
+
+</main>
+
+{% endblock %}

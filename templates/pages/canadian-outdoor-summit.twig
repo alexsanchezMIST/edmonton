@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main id="main" class="main" role="main">
+    {# BEGIN HERO SECTION #}
+    <section id="hero--page" class="section section--hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <h1 class="hero__heading--page">{{ post.title }}</h1>
+            </div>
+        </div>
+    </section>
+    {# END HERO SECTION #}
+
+    {# BEGIN CONTENT SECTION #}
+    <section id="content" class="section">
+        <div class="container">
+            <div class="content__wrapper">
+                <article id="post-{{ post.ID }}" class="prose--cos post-type-{{ post.post_type }}">
+                    {{ post.content }}
+                </article>
+            </div>
+        </div>
+    </section>
+    {# END CONTENT SECTION #}
+
+    {% include "partials/mountains.twig" %}
+</main>
+
+{% endblock %}

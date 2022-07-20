@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="480px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Bitmap</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="480" height="480"></rect>
+    </defs>
+    <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bitmap">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="user-circle" mask="url(#mask-2)" fill="#58707B">
+                <path d="M480,240 C480,372.549 372.549,480 240,480 C107.4516,480 0,372.549 0,240 C0,107.4516 107.4516,0 240,0 C372.549,0 480,107.4516 480,240 Z M300,150 C300,183.1371 273.138,210 240,210 C206.8629,210 180,183.1371 180,150 C180,116.8629 206.8629,90 240,90 C273.138,90 300,116.8629 300,150 Z M239.9979,270 C179.4717,270 127.3182,305.85 103.6122,357.471 C136.6209,395.76 185.4795,420 239.9994,420 C294.519,420 343.377,395.763 376.386,357.474 C352.68,305.85 300.525,270 239.9979,270 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,44 @@
+<footer id="footer" class="footer">
+    <div class="footer__top pt-18 pb-12">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__col">
+                    <a href="/" class="footer__brand">
+                        <img src="{{ theme.path ~ '/static/img/occ-logo-white.svg' }}" alt="" class="footer__logo">
+                    </a>
+                </div>
+                <div class="footer__col">
+                    <h5 class="footer__heading">About</h5>
+                    {% for item in footer_about_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+                <div class="footer__col">
+                    <h5 class="footer__heading">Useful Links</h5>
+                    {% for item in footer_links_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+                <div class="footer__col">
+                    <h5 class="footer__heading">Legal</h5>
+                    {% for item in footer_legal_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+                <div class="footer__col">
+                    <h5 class="footer__heading">Membership</h5>
+                    {% for item in footer_membership_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom py-6">
+        <div class="container">
+            <div class="footer__bottom-wrapper">
+                <p class="footer__copyright">© {{"now"|date('Y')}} Outdoor Council of Canada - All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>

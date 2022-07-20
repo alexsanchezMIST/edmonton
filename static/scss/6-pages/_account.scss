@@ -1,0 +1,54 @@
+// ********************
+// ACCOUNT
+// ********************
+
+.account__wrapper {
+  @extend .prose;
+}
+
+.account__card {
+  padding: 2.5rem;
+  background-color: map-get($slate, "50");
+  border: 2px solid map-get($slate, "100");
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.33rem;
+  font-weight: 400;
+
+  &:not(last-of-type) {
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  ul > li {
+    padding-left: unset;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  a {
+    display: block;
+    margin: 1.25rem 0;
+  }
+
+  i,
+  br {
+    display: none;
+  }
+
+  .wishlistmember-mergecode-payperposts-showmorebutton {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    &:not(last-of-type) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

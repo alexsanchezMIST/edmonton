@@ -1,0 +1,84 @@
+<header class="header" >
+    {% block header %}
+        <nav id="nav" class="nav" role="navigation">
+            <div class="nav__container">
+                <a href="/" rel="home" class="nav__brand">
+                    <img src="{{ theme.path ~ '/static/img/occ-logo.svg' }}" alt="" class="nav__logo">
+                </a>
+                <div class="nav__menu">
+                    {% for item in menu.get_items %}
+                        {% if item.children %} 
+                            <div class="nav__link-wrapper dropdown" x-data="{ open: false }" @click="open = ! open">
+                                <div class="nav__link dropdown-toggle">
+                                    {{ item.title }}
+                                    <img src="{{ theme.path ~ '/static/img/chevron-down.svg' }}" class="dropdown__icon">
+                                </div>
+                                <div class="dropdown__menu" x-show="open" @click.outside="open = false" x-cloak>
+                                    {% for child in item.children %} 
+                                        <a href="{{ child.link }}" class="dropdown__item">
+                                            {% if child.master_object.meta('icon') %}
+                                                <img src="{{ Image(child.master_object.meta('icon')).src }}" alt="" class="dropdown__item__icon">
+                                            {% endif %}
+                                            <div class="dropdown__item__right">
+                                                <p class="dropdown__link">{{ child.title }} →</p>
+                                                {% if child.master_object.meta('teaser') %}
+                                                    <p class="dropdown__teaser">{{ child.master_object.meta('teaser') }}</p>
+                                                {% endif %}
+                                            </div>
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% else %} 
+                            <div class="nav__link-wrapper">
+                                <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
+                            </div>
+                        {% endif %} 
+                    {% endfor %}
+                </div>
+                <div class="nav__right">
+                    {% for item in membership_menu.get_items %}
+                        <a href="{{ item.link }}" class="nav__link--membership">{{ item.title }}</a>
+                    {% endfor %} 
+                </div>
+                <div class="nav__mobile-wrapper" x-data="{ open: false }">
+                    <div class="nav__hamburger" @click = "open = !open ">
+                        <img src="{{ theme.path ~ '/static/img/menu.svg' }}" alt="" class="nav__logo--hamburger">
+                    </div>
+                    <div class="nav__mobile-menu" x-show="open" x-cloak>
+                        <div class="nav__mobile-close" @click="open = false">
+                            <img src="{{ theme.path ~ '/static/img/x.svg' }}" alt="" class="nav__mobile-close-icon">
+                        </div>
+                        {% for item in menu.get_items %}
+                            {% if item.children %}
+                                <div class="nav__link-wrapper--mobile dropdown" x-data="{ open: false }" @click="open = ! open">
+                                    <div class="nav__link--mobile dropdown-toggle">
+                                        {{ item.title }}
+                                        <img src="{{ theme.path ~ '/static/img/chevron-down.svg' }}" class="dropdown__icon">
+                                    </div>
+                                    <div class="dropdown__menu--mobile" x-show="open" @click.outside-"open = false" x-cloak>
+                                        {% for child in item.children %}
+                                            <a href="{{ child.link }}" class="dropdown__item--mobile">
+                                                <div class="dropdown__item-wrapper">
+                                                    <p class="dropdown__link--mobile">{{ child.title }} →</p>
+                                                    {% if child.master_object.meta('teaser') %}
+                                                        <p class="dropdown__teaser--mobile">{{ child.master_object.meta('teaser') }}</p>
+                                                    {% endif %}
+                                                </div>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="nav__link-wrapper--mobile">
+                                    <a href="{{ item.link }}" class="nav__link--mobile">{{ item.title }}</a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+</header>
+

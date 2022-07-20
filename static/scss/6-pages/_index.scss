@@ -1,0 +1,861 @@
+// ********************
+// HERO SECTION
+// ********************
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, min-content));
+  gap: 3.75rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 5 / span 5;
+  }
+}
+
+.hero__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 7 / span 7;
+  }
+}
+
+.hero__right__img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+  background-image: url("static/img/occ-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.5);
+  outline: 12px solid $white;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    transform: rotate(0.75deg);
+  }
+}
+
+.hero__right__copy {
+  position: relative;
+  margin-top: 3.75rem;
+  font-family: "Caveat", sans-serif;
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 500;
+  color: $amaranth;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -7.5rem;
+    right: -10rem;
+    width: 10rem;
+    height: 10rem;
+    background-image: url("static/img/arrow-vector.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.hero__wrapper,
+.intro__wrapper {
+  width: 100%;
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__heading {
+  font-weight: 900;
+}
+
+.hero__subheading {
+  @extend h5;
+  font-weight: 500;
+  color: map-get($slate, "400");
+}
+
+.hero__subheading + a,
+.hero__subheading + p {
+  margin-top: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 1.25rem;
+  }
+}
+
+.hero__play-btn {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-top: -2.5rem;
+  margin-right: -2.5rem;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  border-radius: 100vw;
+  box-shadow: 0 0 0 0 rgba($amaranth, 0.5);
+  animation: pulse 1.5s infinite;
+  background-image: url("static/img/play.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black, 0.75);
+  backdrop-filter: blur(16px);
+}
+
+.hero__modal__content {
+  width: 75%;
+  max-width: 67.5rem;
+  text-align: center;
+}
+
+.hero__video-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin-bottom: 1.25rem;
+}
+
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__modal__close {
+  border: unset;
+  color: $white;
+  opacity: 0.5;
+  text-decoration: underline;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// ********************
+// RESOURCES SECTION
+// ********************
+
+.resources__wrapper {
+  display: grid;
+  grid-gap: 1.875rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+}
+
+.resources__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.5rem;
+}
+
+.resources__img {
+  width: auto;
+  height: 10rem;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.resources__heading {
+  @extend h4;
+  font-weight: 700;
+  margin-bottom: 0.625rem;
+}
+
+.resources__summary {
+  font-size: 1rem;
+  line-height: 1.33;
+  color: map-get($slate, "400");
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.download-icon {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("static/img/download.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-right: 0.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-right: 0.5rem;
+  }
+}
+
+// ********************
+// PROJECTS SECTION
+// ********************
+
+#projects {
+  background-color: #f3f8fa;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/border-jagged.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      top: 0rem;
+      height: 2.5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      top: 0rem;
+      height: 5rem;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    background-image: url("static/img/trees.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.section__heading {
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.projects__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects__card {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  max-width: 60.625rem;
+  margin: 0 auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  background-image: url("static/img/field-leader.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem;
+  }
+}
+
+.projects__card__wrapper {
+  width: 100%;
+}
+
+.projects__left {
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.projects__heading {
+  @extend h3;
+  font-weight: 700;
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 0.625rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.projects__subheading {
+  color: rgba($white, 0.8);
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.projects__tabs-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: rgba($cutty, 0.1);
+  margin: 0 auto 1.25rem auto;
+  padding: 0.5rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    width: auto;
+  }
+}
+
+.projects__tab {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-in-out;
+  color: map-get($slate, "500");
+  text-align: center;
+
+  &:hover {
+    background-color: map-get($slate, "300");
+  }
+
+  &.active {
+    background-color: $white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.section__helmet--projects {
+  @extend .section__helmet;
+  margin-bottom: 1.25rem;
+}
+
+// ********************
+// ABOUT SECTION
+// ********************
+
+.about__wrapper {
+  display: grid;
+  grid-gap: 3.75rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, min-content));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+}
+
+.about__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.about__testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $amaranth;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-weight: 400;
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 2.5rem;
+  }
+}
+
+.about__right {
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 3 / span 3;
+  }
+}
+
+.testimonial__author {
+  font-weight: 700;
+}
+
+.testimonial__copy {
+  margin-bottom: 1.25rem;
+}
+
+// ********************
+// COURSES SECTION
+// ********************
+
+#courses {
+  background-color: map-get($slate, "50");
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-top: 5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 10rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/mountains.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      top: -5rem;
+      height: 5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      top: -10rem;
+      height: 10rem;
+    }
+  }
+}
+
+.courses__wrapper {
+  @extend .resources__wrapper;
+}
+
+.courses__card {
+  @extend .resources__card;
+}
+
+.courses__heading {
+  @extend .resources__heading;
+}
+
+.courses__summary {
+  @extend .resources__summary;
+}
+
+// ********************
+// MEMBER SECTION
+// ********************
+
+.member__card {
+  width: 100%;
+  max-width: 60.625rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  padding: 2.5rem 1.25rem;
+  background-image: url("static/img/member.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 2.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.member__content {
+  width: 100%;
+  max-width: 35.625rem;
+  text-align: center;
+}
+
+.member__heading {
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 0.625rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.member__subheading {
+  color: rgba($white, 0.8);
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+// ********************
+// CONTACT SECTION
+// ********************
+
+#contact {
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+
+  @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
+    padding-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    padding-top: 3.75rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding-top: 5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    padding-top: 6.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    padding-top: 7.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    padding-top: 8.75rem;
+  }
+}
+
+#contact-form {
+  width: 100%;
+  max-width: 48.125rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.875rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, min-content));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, min-content));
+    margin-top: 5rem;
+  }
+}
+
+#contact-form > input[type="text"] {
+  grid-column: span 1 / span 1;
+}
+
+#contact-form > input[type="email"],
+#contact-form > input[type="submit"] {
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-column: span 1 / span 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+#contact-form > input[type="submit"] {
+  height: 4rem;
+  max-width: none;
+}
+
+#contact-form > textarea {
+  width: 100%;
+  background-color: #f8fafc;
+  border-radius: 0.25rem;
+  padding-bottom: 7.5rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-column: span 1 / span 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.contact__email-wrapper {
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-top: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 2.5rem;
+  }
+}
+
+.contact__email {
+  color: $amaranth;
+}
+
+// ********************
+// MOUNTAINS SECTION
+// ********************
+
+#mountains {
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    //min-height: 15rem;
+    padding-top: 15rem;
+    padding-bottom: 7.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    //min-height: 30rem;
+    padding-top: 30rem;
+    padding-bottom: 15rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+    background-image: url("static/img/birds.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/mountain-range.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      height: 15rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      height: 30rem;
+    }
+  }
+}
+
+// ********************
+// CAROUSEL SECTION
+// ********************
+
+.carousel {
+  width: calc(17.5rem * 20);
+  height: auto;
+  animation: horizontalScroll 60s linear infinite;
+}
+
+.carousel__wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  display: grid;
+  place-items: center;
+  width: 17.5rem;
+  height: 5rem;
+}
+
+.carousel__slide > img {
+  width: auto;
+  opacity: 0.5;
+}
+
+.carousel__logo--expert-voice,
+.carousel__logo--cwf,
+.carousel__logo--zoppinh {
+  height: 2.5rem;
+}
+
+.carousel__logo--aeq,
+.carousel__logo--joelette,
+.carousel__logo--hikens,
+.carousel__logo--viristar,
+.carousel__logo--black-diamond {
+  height: 3rem;
+}
+
+.carousel__logo--iga {
+  height: 3.5rem;
+}
+
+.carousel__logo--ucalgary {
+  height: 3.75rem;
+}
+
+.gfield-choice-input {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.gform_button,
+.gform_next_button {
+  @extend .btn;
+  @extend .btn--primary;
+}
+
+#input_2_4_6,
+#input_2_11,
+.gfield_select {
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  background-color: map-get($slate, "50");
+  border-radius: 0.25rem;
+  border: unset;
+}
+
+#input_2_5 {
+  width: 100%;
+}
+
+.section__helmet {
+  width: 100%;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.section__subheading {
+  @extend .hero__subheading;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: $amaranth;
+  text-transform: uppercase;
+  background-color: rgba($amaranth, 0.05);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+}

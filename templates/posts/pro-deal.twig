@@ -1,0 +1,21 @@
+{% extends 'base.twig' %} 
+
+{% block content %} 
+<main id="main" class="main">
+    <section id="content" class="section pt-18">
+        <div class="container">
+            <div class="section__helmet">
+                <h1 class="hero__heading">{{ post.title }}</h1>
+                <p class="hero__subheading">Click on the button below to access your resources.</p>
+            </div>
+            <article class="prose mx-auto">
+                {{ post.content }}
+            </article>
+        </div>
+    </section>
+
+    {% include 'partials/mountains.twig' %}
+
+</main>
+
+{% endblock %}

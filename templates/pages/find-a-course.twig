@@ -1,0 +1,52 @@
+{% extends 'base.twig' %} 
+
+{% block content %} 
+
+<main id="main" class="main" role="main">
+
+    {# BEGIN HERO SECTION #}
+    <section id="hero--page" class="section section--hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <h1 class="our-people__heading">{{ post.title }}</h1>
+            </div>
+        </div>
+    </section>
+    {# END HERO SECTION #}
+
+    {# BEGIN CONTENT SECTION #}
+    <section id="content" class="section pt-18">
+        <div class="container">
+            <div class="course__wrapper">
+                {% for post in courses %}
+                <a href="#courses" class="course__card">
+                    <img src="{{ Image(post.meta('image')).src }}" alt="" class="course__card__thumbnail mb-8">
+                    <div class="course__card__bottom">
+                        <h4 class="deal__heading mb-2">{{ post.title }}</h4>
+                        <p class="deal__excerpt">{{ post.content }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {# END CONTENT SECTION #}
+
+    {# BEGIN COURSES SECTION #}
+    <section id="courses" class="section pt-18">
+        <div class="container">
+            <div class="section__helmet">
+                <h2 class="section__heading">Upcoming Courses</h2>
+            </div>
+            <div>
+                {{ post.content }}
+            </div>
+        </div>
+    </section>
+    {# END COURSES SECTION #}
+
+    {% include 'partials/mountains.twig' %}
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,149 @@
+// ********************
+// GLOBAL FORMS
+// ********************
+
+input,
+textarea {
+  height: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  min-height: 2.75rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    min-height: 3.5rem;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+input[type="text"],
+textarea {
+  border: 1px solid map-get($slate, "100");
+}
+
+input[type="submit"] {
+  @extend .btn;
+  @extend .btn--primary;
+  cursor: pointer;
+}
+
+// ********************
+// ACTIVE CAMPAIGN FORMS
+// ********************
+
+.af-form-wrapper {
+  width: 100%;
+  max-width: 41.875rem;
+  margin: 0 auto;
+}
+
+._form {
+  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+    0 4px 6px -4px rgba($black, 0.1);
+  border-radius: 0.75rem;
+}
+
+._form_3,
+._form_5,
+._form_7 {
+  padding: 2.5rem 1.875rem;
+  border: 1px solid map-get($slate, "100");
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 3.75rem;
+  }
+}
+
+._form-title {
+  @extend h3;
+  font-weight: 700;
+  color: map-get($slate, "700");
+}
+
+._form p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: map-get($slate, "400");
+}
+
+._form_element._x54192622,
+._form_element._x71006041,
+._form_element._x53478544,
+._form_element._x74202095 {
+  margin: 1.25rem 0;
+}
+
+._field-wrapper {
+  margin: 1.25rem 0;
+}
+
+._field-wrapper,
+input {
+  width: 100%;
+  background-color: map-get($slate, "50");
+  border-radius: 0.25rem;
+  border: unset;
+}
+
+._submit {
+  @extend .btn;
+  @extend .btn--primary;
+  margin-top: 2.5rem;
+}
+
+.tribe-linked-type-venue-phone,
+.tribe-linked-type-venue-website {
+  display: none;
+}
+
+// ********************
+// MEMBERPRESS FORMS
+// ********************
+
+.mp-form-label label {
+  visibility: hidden;
+}
+
+#mepr_loginform {
+  input[type="submit"] {
+    max-width: unset;
+  }
+
+  label {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+input[type="checkbox"] {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.mepr-login-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.gform_ajax_spinner {
+  display: none !important;
+}

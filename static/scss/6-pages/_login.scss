@@ -1,0 +1,102 @@
+// ********************
+// LOGIN
+// ********************
+
+#login {
+  background-image: url("static/img/occ-login.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  > * {
+    position: relative;
+    z-index: 100;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($cello, 0.2);
+    mix-blend-mode: multiply;
+  }
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 29.375rem;
+  margin: 0 auto 1.25rem auto;
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.75rem;
+  background-color: $white;
+  padding: 2.5rem;
+}
+
+.login__heading {
+  font-weight: 700;
+  text-align: center;
+}
+
+.logo {
+  @extend .nav__logo;
+  margin-bottom: 2.5rem;
+}
+
+#back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.login__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login__bottom__heading {
+  font-weight: 700;
+  color: $white;
+}
+
+.login__bottom__link {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
+  color: map-get($slate, "100");
+}
+
+.wlm3-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  > p {
+    text-align: center;
+  }
+}
+
+#wlm_form_field_wp-submit {
+  margin: 0 auto 1.25rem auto;
+  max-width: unset;
+}
+
+.wlm3-form .wlm3-form-group label:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

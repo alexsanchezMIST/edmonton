@@ -1,0 +1,31 @@
+{% extends 'base.twig' %} 
+
+{% block content %} 
+
+<main id="main" class="main" role="main">
+    <section id="content" class="section pt-18">
+        <div class="container">
+            <div class="section__helmet">
+                <h1 class="hero__heading">{{ post.title }}</h1>
+                <p class="hero__subheading">Click on the button below to access your resources.</p>
+            </div>
+            <div class="deal__wrapper">
+                {% for pro_deal in pro_deals %}
+                <a href="{{ pro_deal.link }}" class="deal__card">
+                    {% if pro_deal.meta('logo') %}
+                        <img src="{{ Image(pro_deal.meta('logo')).src }}" alt="" class="deal__logo mb-4">
+                        {% else %}
+                        <h4 class="deal__heading mb-2">{{ pro_deal.title }}</h4>
+                    {% endif %}
+                    <p class="deal__excerpt">{{ pro_deal.content|excerpt(8) }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% include 'partials/mountains.twig' %}
+
+</main>
+
+{% endblock %}

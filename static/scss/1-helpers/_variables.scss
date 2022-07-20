@@ -1,0 +1,105 @@
+// ********************
+// COLORS
+// ********************
+
+$cello: #1c3252;
+$aqua: #a1dcdb;
+$amaranth: #ef3d43;
+$glacier: #8ab6c8;
+$cutty: #58707b;
+
+$slate: (
+  "50": #f8fafc,
+  "100": #f1f5f9,
+  "200": #e2e8f0,
+  "300": #cbd5e1,
+  "400": #94a3b8,
+  "500": #64748b,
+  "600": #475569,
+  "700": #334155,
+  "800": #1e293b,
+  "900": #0f172a,
+);
+
+$white: #ffffff;
+$black: #000000;
+
+.is-white {
+  color: $white;
+}
+
+// ********************
+// BOX SHADOWS
+// ********************
+
+$box-shadows: (
+  "small": 0 1px 3px 0 rgba($black, 0.1),
+  "medium": 0 4px 6px -1px rgba($black, 0.1),
+  "large": 0 10px 15px -3px rgba($black, 0.1),
+  "xl": 0 20px 25px -5px rgba($black, 0.1),
+  "2xl": 0 25px 50px -12px rgba($black, 0.25),
+);
+
+// ********************
+// BREAKPOINTS
+// ********************
+
+$breakpoints: (
+  "small": 40rem,
+  "medium": 48rem,
+  "large": 69.5rem,
+  "xl": 80rem,
+  "2xl": 96.875rem,
+);
+
+$breakpoints-minus-one: (
+  "small": calc(map-get($breakpoints, "small")) - 0.0625rem,
+  "medium": calc(map-get($breakpoints, "medium")) - 0.0625rem,
+  "large": calc(map-get($breakpoints, "large")) - 0.0625rem,
+  "xl": calc(map-get($breakpoints, "xl")) - 0.0625rem,
+  "2xl": calc(map-get($breakpoints, "2xl")) - 0.0625rem,
+);
+
+// ********************
+// TEXT SIZE
+// ********************
+
+$text-size: (
+  "100": clamp(0.42rem, calc(0.35rem + 0.18vw), 0.53rem),
+  "200": clamp(0.56rem, calc(0.46rem + 0.25vw), 0.7rem),
+  "300": clamp(0.75rem, calc(0.62rem + 0.33vw), 0.94rem),
+  "400": clamp(1rem, calc(0.82rem + 0.44vw), 1.25rem),
+  "500": clamp(1.33rem, calc(1.1rem + 0.59vw), 1.67rem),
+  "600": clamp(1.78rem, calc(1.46rem + 0.78vw), 2.22rem),
+  "700": clamp(2.37rem, calc(1.95rem + 1.04vw), 2.96rem),
+  "800": clamp(3.16rem, calc(2.6rem + 1.39vw), 3.95rem),
+  "900": clamp(4.21rem, calc(3.47rem + 1.85vw), 5.26rem),
+);
+
+// ********************
+// SPACING
+// ********************
+
+$spacing: (
+  "100": clamp(0.25rem, calc(0.21rem + 0.11vw), 0.31rem),
+  "200": clamp(0.5rem, calc(0.41rem + 0.22vw), 0.63rem),
+  "300": clamp(0.75rem, calc(0.62rem + 0.33vw), 0.94rem),
+  "400": clamp(1rem, calc(0.82rem + 0.44vw), 1.25rem),
+  "500": clamp(1.5rem, calc(1.24rem + 0.66vw), 1.88rem),
+  "600": clamp(2rem, calc(1.65rem + 0.88vw), 2.5rem),
+  "700": clamp(3rem, calc(2.47rem + 1.32vw), 3.75rem),
+  "800": clamp(4rem, calc(3.3rem + 1.76vw), 5rem),
+  "900": clamp(6rem, calc(4.95rem + 2.64vw), 7.5rem),
+);
+
+$spacing-pairs: (
+  "from-100-to-200": clamp(0.25rem, calc(-0.01rem + 0.66vw), 0.63rem),
+  "from-200-to-300": clamp(0.5rem, calc(0.19rem + 0.77vw), 0.94rem),
+  "from-300-to-400": clamp(0.75rem, calc(0.4rem + 0.88vw), 1.25rem),
+  "from-400-to-500": clamp(1rem, calc(0.38rem + 1.54vw), 1.88rem),
+  "from-500-to-600": clamp(1.5rem, calc(0.8rem + 1.76vw), 2.5rem),
+  "from-600-to-700": clamp(2rem, calc(0.77rem + 3.08vw), 3.75rem),
+  "from-700-to-800": clamp(3rem, calc(1.59rem + 3.52vw), 5rem),
+  "from-800-to-900": clamp(4rem, calc(1.54rem + 6.15vw), 7.5rem),
+  "from-400-to-900": clamp(1rem, calc(-3.57rem + 11.43vw), 7.5rem),
+);

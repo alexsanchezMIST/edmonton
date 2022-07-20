@@ -1,0 +1,194 @@
+// ********************
+// TYPOGRAPHY
+// ********************
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: map-get($text-size, "400");
+  line-height: 1.33;
+  color: map-get($slate, "500");
+}
+
+// ********************
+// HEADINGS
+// ********************
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Overpass", sans-serif;
+  line-height: 1;
+  color: map-get($slate, "900");
+}
+
+h1 {
+  font-size: map-get($text-size, "800");
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+h1 + p {
+  font-size: map-get($text-size, "400");
+  font-weight: 500;
+  color: map-get($slate, "400");
+}
+
+h2 {
+  font-size: map-get($text-size, "700");
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h2 + p {
+  font-size: map-get($text-size, "400");
+  font-weight: 400;
+  color: map-get($slate, "400");
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h3 {
+  font-size: map-get($text-size, "600");
+}
+
+h4 {
+  font-size: map-get($text-size, "500");
+}
+
+h5 {
+  font-size: map-get($text-size, "400");
+}
+
+h6 {
+  font-size: map-get($text-size, "300");
+}
+
+// ********************
+// BASE
+// ********************
+
+p {
+  font-size: map-get($text-size, "400");
+  line-height: 1.33;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 700;
+  color: map-get($slate, "700");
+}
+
+// ********************
+// PROSE
+// ********************
+
+.prose {
+  width: 100%;
+  max-width: 65ch;
+}
+
+.prose p {
+  margin-block: map-get($spacing, "400");
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.prose h2 {
+  font-size: map-get($text-size, "500");
+  margin-top: map-get($spacing-pairs, "from-500-to-600");
+  margin-bottom: map-get($spacing-pairs, "from-300-to-400");
+}
+
+.prose h3 {
+  font-size: map-get($text-size, "400");
+  margin-top: map-get($spacing-pairs, "from-400-to-500");
+  margin-bottom: map-get($spacing-pairs, "from-200-to-300");
+}
+
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: map-get($spacing-pairs, "from-300-to-400");
+  margin-bottom: map-get($spacing-pairs, "from-100-to-200");
+}
+
+.prose h4 {
+  font-size: map-get($text-size, "300");
+}
+
+.prose h5,
+.prose h6 {
+  font-size: map-get($text-size, "200");
+}
+
+.prose figure {
+  margin-block: map-get($spacing, "600");
+}
+
+.prose img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.prose a {
+  font-weight: 600;
+  color: $amaranth;
+  text-decoration: none;
+}
+
+.prose figcaption {
+  font-size: 1rem;
+  line-height: 1.33rem;
+  text-align: center;
+}
+
+.prose ol {
+  list-style: decimal inside;
+}
+
+.prose {
+  ul > li {
+    position: relative;
+    margin-block: 1.25rem;
+    padding-left: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.33rem;
+
+    &::before {
+      content: "";
+      @include position(absolute, 4px, null, null, 0);
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: url("static/img/leaf-filled.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+}
+
+.prose blockquote {
+  border-left: 10px solid $amaranth;
+  margin-block: 2.5rem;
+  padding-left: 2.5rem;
+  color: map-get($slate, "400");
+
+  > cite {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 600;
+  }
+}
