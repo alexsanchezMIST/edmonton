@@ -1,3 +1,7 @@
+// ********************
+// HELLO BAR
+// ********************
+
 #hello {
   position: fixed;
   right: 0;
@@ -6,10 +10,14 @@
   z-index: 900;
   display: grid;
   place-items: center;
-  padding: 1.25rem 0;
+  padding: 2.5rem;
   width: 100vw;
   background-color: $cello;
   overflow: hidden;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 1.25rem 0;
+  }
 
   &::before {
     content: "";
@@ -40,8 +48,17 @@
   }
 }
 
+.hello__left {
+  margin-bottom: map-get($spacing, "600");
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: unset;
+    text-align: start;
+  }
+}
+
 .hello__heading {
-  @extend h5;
   font-weight: 700;
   color: $white;
 }
@@ -52,7 +69,12 @@
   color: map-get($slate, "400");
 }
 
+// ********************
+// QUIZ FORM
+// ********************
+
 #_form_9_ {
+  width: 100%;
   box-shadow: unset;
   border-radius: unset;
 }
@@ -62,6 +84,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
     flex-direction: row;
@@ -75,6 +98,7 @@
 }
 
 ._form_element--hello {
+  width: 100%;
   margin-bottom: 1.25rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
@@ -83,9 +107,14 @@
   }
 }
 
+._button-wrapper._full_width {
+  width: 100%;
+}
+
 ._submit--hello {
   @extend .btn;
   @extend .btn--primary;
+  width: 100%;
   height: 2.75rem;
   font-size: 1rem;
 }
@@ -98,9 +127,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  padding: 0 1.75rem;
-  height: 100%;
+  padding: 1.25rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,6 +136,14 @@
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1.75rem;
+    height: 100%;
+  }
 
   &:hover {
     opacity: 1;

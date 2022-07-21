@@ -51,7 +51,7 @@
 
 .nav__logo {
   width: auto;
-  height: 3rem;
+  height: 2.25rem;
 }
 
 .nav__link-wrapper {
@@ -63,7 +63,7 @@
 }
 
 .nav__link {
-  margin: 0 0.625rem;
+  margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   font-size: map-get($text-size, "300");
   line-height: 1.33rem;
@@ -225,6 +225,7 @@
 }
 
 .nav__link--mobile {
+  margin-block: map-get($spacing, "400");
   font-size: map-get($text-size, "700");
   transition: color 0.3s;
 
