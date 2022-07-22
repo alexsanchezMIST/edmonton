@@ -53,6 +53,12 @@
 // APPLICATION FORM
 // ********************
 
+#gform_7 {
+  fieldset:not(:last-of-type) {
+    margin-bottom: map-get($spacing, "300");
+  }
+}
+
 .gform_previous_button {
   display: none !important;
 }
