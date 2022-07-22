@@ -73,6 +73,18 @@
 // QUIZ FORM
 // ********************
 
+.hello__right {
+  width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+}
+
 #_form_9_ {
   width: 100%;
   box-shadow: unset;
@@ -80,42 +92,54 @@
 }
 
 ._form-content--hello {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  row-gap: map-get($spacing, "400");
   width: 100%;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    column-gap: map-get($spacing, "400");
+    row-gap: unset;
   }
-}
-
-._field-wrapper--hello > input {
-  height: 2.75rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 ._form_element--hello {
   width: 100%;
-  margin-bottom: 1.25rem;
+  height: 100%;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
     margin-bottom: unset;
-    margin-right: 1.25rem;
+    grid-column: span 3 / span 3;
+  }
+}
+
+._field-wrapper--hello > input {
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    height: 100%;
   }
 }
 
 ._button-wrapper._full_width {
   width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 4 / span 4;
+  }
 }
 
 ._submit--hello {
   @extend .btn;
   @extend .btn--primary;
   width: 100%;
-  height: 2.75rem;
+  height: 100%;
   font-size: 1rem;
 }
 
