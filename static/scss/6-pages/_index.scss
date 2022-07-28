@@ -628,7 +628,7 @@
   }
 }
 
-#contact-form {
+#gform_19 {
   width: 100%;
   max-width: 48.125rem;
   margin: 0 auto;
@@ -648,12 +648,12 @@
   }
 }
 
-#contact-form input[type="text"] {
+#gform_19 > input[type="text"] {
   grid-column: span 1 / span 1;
 }
 
-#contact-form input[type="email"],
-#contact-form input[type="submit"] {
+#gform_19 > input[type="email"],
+#gform_19 > input[type="submit"] {
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
     grid-column: span 1 / span 1;
   }
@@ -663,12 +663,12 @@
   }
 }
 
-#contact-form input[type="submit"] {
+#gform_19 > input[type="submit"] {
   height: 4rem;
   max-width: none;
 }
 
-#contact-form textarea {
+#gform_19 > textarea {
   width: 100%;
   background-color: #f8fafc;
   border-radius: 0.25rem;
