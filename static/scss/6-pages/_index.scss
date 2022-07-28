@@ -648,12 +648,12 @@
   }
 }
 
-#contact-form > input[type="text"] {
+#contact-form input[type="text"] {
   grid-column: span 1 / span 1;
 }
 
-#contact-form > input[type="email"],
-#contact-form > input[type="submit"] {
+#contact-form input[type="email"],
+#contact-form input[type="submit"] {
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
     grid-column: span 1 / span 1;
   }
@@ -663,12 +663,12 @@
   }
 }
 
-#contact-form > input[type="submit"] {
+#contact-form input[type="submit"] {
   height: 4rem;
   max-width: none;
 }
 
-#contact-form > textarea {
+#contact-form textarea {
   width: 100%;
   background-color: #f8fafc;
   border-radius: 0.25rem;
