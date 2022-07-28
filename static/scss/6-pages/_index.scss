@@ -629,58 +629,22 @@
 }
 
 #gform_19 {
-  width: 100%;
-  max-width: 48.125rem;
-  margin: 0 auto;
-  display: grid;
-  gap: 1.875rem;
-
-  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-template-rows: repeat(4, minmax(0, min-content));
-    margin-top: 2.5rem;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, min-content));
-    margin-top: 5rem;
-  }
+  width: min(100%, 48.125rem);
+  margin-inline: auto;
 }
 
-#gform_19 > input[type="text"] {
-  grid-column: span 1 / span 1;
+.gform_heading {
+  display: none;
 }
 
-#gform_19 > input[type="email"],
-#gform_19 > input[type="submit"] {
-  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    grid-column: span 1 / span 1;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    grid-column: span 2 / span 2;
-  }
-}
-
-#gform_19 > input[type="submit"] {
-  height: 4rem;
-  max-width: none;
-}
-
-#gform_19 > textarea {
+#input_19_4 {
   width: 100%;
   background-color: #f8fafc;
   border-radius: 0.25rem;
-  padding-bottom: 7.5rem;
+}
 
-  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    grid-column: span 1 / span 1;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    grid-column: span 2 / span 2;
-  }
+#gform_submit_button_19 {
+  width: 100%;
 }
 
 .contact__email-wrapper {
