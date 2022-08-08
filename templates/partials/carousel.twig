@@ -1,11 +1,38 @@
 <section id="carousel--{{ block.id }}" class="section py-18">
     <div class="container">
         <div class="glider">
-            {% for post in logos %}
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/black-diamond.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/cwf-english.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/expertvoice.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/hikens.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/iga.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/joelette.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/ucalgary.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/viristar.svg'}}" alt="" class="">
+            </div>
+            <div class="glider--slide">
+                <img src="{{ theme.path ~ '/static/img/zoppinh.svg'}}" alt="" class="">
+            </div>
+{#             {% for post in logos %}
                 <div id="slide--{{ post.id }}" class="glider--slide">
                     <img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="glider--logo">
                 </div>
-            {% endfor %}
+            {% endfor %} #}
         </div>
     </div>
 </section>
@@ -34,31 +61,3 @@
     })
 </script>
 
-
-{#             <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/black-diamond.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/cwf-english.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/expertvoice.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/hikens.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/iga.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/joelette.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/ucalgary.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/viristar.svg'}}" alt="" class="">
-            </div>
-            <div class="glider--slide">
-                <img src="{{ theme.path ~ '/static/img/zoppinh.svg'}}" alt="" class="">
-            </div> #}
