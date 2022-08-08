@@ -1,0 +1,23 @@
+{# <a href="{{ person.link }}" class="people__card">
+    {% if person.meta('avatar') %}
+        <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
+    {% else %} 
+        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
+    {% endif %}
+    <div class="people__right">
+        <h3 class="people__card__heading">{{ person.title }}</h3>
+        <p class="people__card__title">{{ person.meta('position') }}</p>
+    </div>
+</a> #}
+
+<a href="{{ post.link }}" id="person--{{ block.id }}" class="person--card">
+    {% if post.meta('avatar') %}
+        <img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="person--avatar">
+    {% else %}
+        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="A default user avatar" class="person--avatar">
+    {% endif %}
+    <div class="person--info--wrapper">
+        <h3 class="person--heading">{{ post.title }}</h3>
+        <p class="person--title">{{ person.meta('position') }}</p>
+    </div>
+</a>
