@@ -4,6 +4,7 @@ $context = Timber::context();
 
 $args = array(
     'post_type' => 'logo',
+    'numberposts' => -1,
     'post_status' => 'publish',
     'perm' => 'readable',
     'nopaging' => true,
