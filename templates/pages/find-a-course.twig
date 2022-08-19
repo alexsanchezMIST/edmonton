@@ -33,17 +33,30 @@
     {# END CONTENT SECTION #}
 
     {# BEGIN COURSES SECTION #}
-    <section id="courses" class="section pt-18">
+    <section id="course" class="section py-18">
         <div class="container">
             <div class="section__helmet">
                 <h2 class="section__heading">Upcoming Courses</h2>
             </div>
             <div>
-                {{ post.content }}
+                {{ function('do_shortcode', '[tribe_events]') }}
             </div>
         </div>
     </section>
     {# END COURSES SECTION #}
+
+    {# BEGIN COURSE FORM SECTION #}
+    <section id="course-form" class="section py-18">
+        <div class="container">
+            <div class="section__helmet">
+                <h2 class="section__heading">Can't Find a Course?</h2>
+            </div>
+            <div>
+                {{ function('do_shortcode', '[gravityform id="16" title="true"]') }}
+            </div>
+        </div>
+    </section>
+    {# END COURSE FORM SECTION #}
 
     {% include 'partials/mountains.twig' %}
 
