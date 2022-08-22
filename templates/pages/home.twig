@@ -27,7 +27,7 @@
         <div class="hero__modal" x-cloak x-show="open" x-transition>
             <div class="hero__modal__content">
                 <div class="hero__video-wrapper">
-                    <iframe id="player" class="hero__video" src="https://www.youtube-nocookie.com/embed/tNaRQ2HmyTQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen enablejsapi="true"></iframe>
+                    <iframe id="player" class="hero__video" src="https://www.youtube-nocookie.com/embed/tNaRQ2HmyTQ?controls=0?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <script>
                         var tag = document.createElement('script');
                         tag.id = 'iframe-demo';
@@ -74,10 +74,9 @@
                 <button id="videoClose" class="hero__modal__close" @click="open = false">Close</button>       
                 <script>
                     const closeBtn = document.querySelector('#videoClose');
-                    function pauseVideo() {
-                        player.pauseVideo();
-                    }
-                    closeBtn.addEventListener('click', pauseVideo);
+                    closeBtn.addEventListener('click', function() {
+                        document.getElementById('player').pauseVideo();
+                    });
                 </script>
             </div> 
         </div>
