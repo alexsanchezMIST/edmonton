@@ -78,6 +78,12 @@
                     </script>
                 </div>
                 <button id="videoClose" class="hero__modal__close" @click="open = false">Close</button>       
+                <script async>
+                    const closeBtn = document.getElementById('videoClose');
+                    closeBtn.addEventListener('click', function() {
+                        player.pauseVideo();
+                    })
+                </script>
             </div> 
         </div>
     </section>
