@@ -263,7 +263,7 @@
         document.getElementById('player').style.borderColor = '#FF6D00';
         const closeBtn = document.getElementById('closeBtn');
         closeBtn.addEventListener('click', function() {
-            player.pauseVideo();
+            document.getElementById('player').pauseVideo();
         });
     };
     function changeBorderColor(playerStatus) {
