@@ -69,15 +69,15 @@
                         function onPlayerStateChange(event) {
                             changeBorderColor(event.data);
                         }
+
+                         const closeBtn = document.querySelector('#videoClose');
+                        
+                        closeBtn.addEventListener('click', function() {
+                            document.getElementById('player').pauseVideo();
+                        });
                     </script>
                 </div>
                 <button id="videoClose" class="hero__modal__close" @click="open = false">Close</button>       
-                <script>
-                    const closeBtn = document.querySelector('#videoClose');
-                    closeBtn.addEventListener('click', function() {
-                        document.getElementById('player').pauseVideo();
-                    });
-                </script>
             </div> 
         </div>
     </section>
