@@ -73,9 +73,8 @@
                 </div>
                 <button id="videoClose" class="hero__modal__close" @click="open = false">Close</button>       
                 <script>
-                    document.querySelector('#videoClose').addEventListener('click,' () => {
-                        player.pauseVideo():Void;
-                    })
+                    const closeBtn = document.querySelector('#videoClose');
+                    closeBtn.addEventListener('click,' player.pauseVideo():Void);
                 </script>
             </div> 
         </div>
