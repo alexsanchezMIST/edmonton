@@ -147,3 +147,20 @@ input[type="checkbox"] {
 .gform_ajax_spinner {
   display: none !important;
 }
+
+#wishlist-member-profile-form {
+  input[type="text"],
+  input[type="email"] {
+    background-color: $white;
+  }
+}
+
+.wlm3-form > p {
+  text-align: start;
+}
+
+#wlm3-password-generator-button_05faf61ba0e391e250dd079152658ec7 {
+  border: none;
+  color: $amaranth;
+  text-decoration: underline;
+}
