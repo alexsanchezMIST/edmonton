@@ -147,9 +147,13 @@
 
 .hero__video-wrapper {
   position: relative;
-  height: 0;
+  width: 100%;
+  height: auto;
   padding-bottom: 56.25%;
   margin-bottom: 1.25rem;
+  outline: 12px solid $white;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  transform: rotate(0.625deg);
 }
 
 .hero__video {
