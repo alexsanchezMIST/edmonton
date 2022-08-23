@@ -156,11 +156,11 @@ input[type="checkbox"] {
 }
 
 .wlm3-form > p {
-  text-align: start;
+  text-align: start !important;
 }
 
-#wlm3-password-generator-button_05faf61ba0e391e250dd079152658ec7 {
-  border: none;
-  color: $amaranth;
-  text-decoration: underline;
+.wlm3-form-group button[type="button"] {
+  border: none !important;
+  color: $amaranth !important;
+  text-decoration: underline !important;
 }
