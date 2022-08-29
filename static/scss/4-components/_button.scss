@@ -44,3 +44,8 @@
     border: 1px solid $amaranth;
   }
 }
+
+.wp-block-button__link {
+  @extend .btn;
+  @extend .btn--primary;
+}
