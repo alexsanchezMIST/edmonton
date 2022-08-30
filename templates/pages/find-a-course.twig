@@ -38,14 +38,13 @@
             <div class="section__helmet">
                 <h2 class="section__heading">Upcoming Courses</h2>
             </div>
-            <div>
+            <div class="mb-10">
                 {{ function('do_shortcode', '[tribe_events]') }}
             </div>
+            {{  post.content }}
         </div>
     </section>
     {# END COURSES SECTION #}
-
-    {{  post.content }}
 
     {# BEGIN COURSE FORM SECTION #}
 {#     <section id="course-form" class="section py-18">
