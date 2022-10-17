@@ -10,6 +10,6 @@ $args = array(
 $context = Timber::context();
 $context['team_members'] = new Timber\PostQuery( $args );
 
-Timber::render( 'resources.twig', $context );
+Timber::render( array( 'pages/' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
 
 ?>
