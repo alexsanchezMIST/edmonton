@@ -33,7 +33,7 @@
   }
 
   &--primary {
-    color: white;
+    color: white !important;
     background-color: $amaranth;
     border: 1px solid $amaranth;
   }
