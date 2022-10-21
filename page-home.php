@@ -48,4 +48,4 @@ $context['projects'] = new Timber\PostQuery($args_projects);
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
-Timber::render( array( 'pages/' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render( array( 'pages/' . $timber_post->post_name . '.twig', 'front-page.twig', 'page.twig' ), $context );
